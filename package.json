@@ -57,10 +57,10 @@
     "zod": "^3.24.4"
   },
   "scripts": {
-  "start": "npx craco start",
-  "build": "npx craco build",
-  "test": "npx craco test"
-},
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -75,7 +75,6 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@craco/craco": "^7.1.0",
     "@eslint/js": "9.23.0",
     "autoprefixer": "^10.4.20",
     "eslint": "9.23.0",
