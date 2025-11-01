@@ -254,7 +254,7 @@ const WatchParty = () => {
       if (snapshot.videoId && snapshot.videoId !== currentVideoId) {
         log('Video changed to:', snapshot.videoId);
         setCurrentVideoId(snapshot.videoId); // Triggers player initialization
-        toast.info('Video changed!');
+        // toast.info('Video changed!');
         
         // If video already playing for others, show sync banner
         if (snapshot.isPlaying && !hasInteracted.current) {
