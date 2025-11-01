@@ -89,11 +89,6 @@ NODE_ENV=development
 ### Production (`.env.production`)
 
 ```env
-# Backend server URL for production
-REACT_APP_BACKEND_URL=https://watch-party-backend-vkj5.onrender.com
-
-# Production mode (disables debug logging)
-NODE_ENV=production
 ```
 
 ---
