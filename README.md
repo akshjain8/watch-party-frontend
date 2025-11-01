@@ -86,13 +86,6 @@ REACT_APP_BACKEND_URL=http://localhost:8001
 NODE_ENV=development
 ```
 
-### Production (`.env.production`)
-
-```env
-```
-
----
-
 ## 📁 Project Structure
 
 ```
@@ -299,58 +292,6 @@ npm install
 npm run build
 
 # Output: build/ directory
-```
-
-### Render.com (Recommended)
-
-**Setup**:
-1. Create Static Site on [Render](https://render.com)
-2. Connect repository
-3. Configure:
-   - **Build Command**: `npm install && npm run build`
-   - **Publish Directory**: `build`
-   - **Environment Variables**:
-     - `NODE_ENV=production`
-     - `REACT_APP_BACKEND_URL=https://watch-party-backend-vkj5.onrender.com`
-4. Deploy!
-
-**Cost**: Free (100GB bandwidth/month)
-
-### Vercel
-
-```bash
-# Install Vercel CLI
-npm install -g vercel
-
-# Deploy
-vercel --prod
-
-# Set environment variable
-vercel env add REACT_APP_BACKEND_URL
-```
-
-### Netlify
-
-```bash
-# Install Netlify CLI
-npm install -g netlify-cli
-
-# Build and deploy
-npm run build
-netlify deploy --prod --dir=build
-
-# Set environment variable in Netlify dashboard
-```
-
-### Other Platforms
-
-Works on any static hosting:
-- GitHub Pages
-- Cloudflare Pages
-- AWS S3 + CloudFront
-- Firebase Hosting
-
----
 
 ## 🧪 Testing
 
@@ -394,62 +335,6 @@ npm install --save-dev @testing-library/react @testing-library/jest-dom
 # Run tests
 npm test
 ```
-
----
-
-## 🐛 Troubleshooting
-
-### "Failed to connect to server"
-
-**Cause**: Backend not running or incorrect URL
-
-**Solution**:
-1. Check backend is running: `curl https://watch-party-backend-vkj5.onrender.com/api/health`
-2. Verify `REACT_APP_BACKEND_URL` is correct
-3. Check browser console for CORS errors
-4. Ensure backend allows frontend origin
-
-### Video not loading
-
-**Cause**: Invalid YouTube URL or API not loaded
-
-**Solution**:
-1. Use format: `https://www.youtube.com/watch?v=VIDEO_ID`
-2. Check browser console for YouTube API errors
-3. Verify video is embeddable (not restricted)
-
-### Playback out of sync
-
-**Cause**: Network latency or drift threshold too high
-
-**Solution**:
-1. Check network latency (< 200ms recommended)
-2. Adjust drift threshold in `applySnapshot()`:
-   ```javascript
-   if (drift > 0.35) { // Lower for stricter sync
-   ```
-3. Verify server is using authoritative time
-
-### Controls not working
-
-**Cause**: Player not ready or event handler error
-
-**Solution**:
-1. Check `playerReadyUI` state is `true`
-2. Open browser console for errors
-3. Verify Socket.io connection is active
-4. Check backend logs for received events
-
-### "Click to start watching" banner stuck
-
-**Cause**: Browser autoplay policy
-
-**Solution**:
-1. Click anywhere on the page to interact
-2. Banner should disappear
-3. Video should start playing
-4. This is normal browser behavior
-
 ### Build errors
 
 **Cause**: Missing dependencies or Node version mismatch
@@ -620,15 +505,6 @@ socket.on('playlist-updated', (newPlaylist) => setPlaylist(newPlaylist));
 
 ---
 
-## 📚 Documentation
-
-- **Main README**: [Watch-Party/README.md](../README.md)
-- **Technical Docs**: [TECHNICAL_DOCUMENTATION.md](../TECHNICAL_DOCUMENTATION.md)
-- **Deployment Guide**: [DEPLOYMENT_GUIDE_RENDER.md](../DEPLOYMENT_GUIDE_RENDER.md)
-- **Production Guide**: [PRODUCTION_READY_GUIDE.md](../PRODUCTION_READY_GUIDE.md)
-- **Backend Docs**: [Backend Repository](https://github.com/YOUR_USERNAME/watchparty-backend)
-
----
 
 ## 🆘 Support
 
@@ -640,19 +516,7 @@ socket.on('playlist-updated', (newPlaylist) => setPlaylist(newPlaylist));
 - **shadcn/ui**: https://ui.shadcn.com
 - **Tailwind CSS**: https://tailwindcss.com
 
-### Get Help
 
-- 🐛 [Report Issues](https://github.com/YOUR_USERNAME/watchparty/issues)
-- 💬 [Discussions](https://github.com/YOUR_USERNAME/watchparty/discussions)
-- 📧 [Email Support](mailto:your-email@example.com)
-
----
-
-## 📄 License
-
-MIT License - See [LICENSE](../LICENSE) file
-
----
 
 ## 🎉 Acknowledgments
 
@@ -667,17 +531,6 @@ MIT License - See [LICENSE](../LICENSE) file
 **Version**: 1.0.0  
 **Last Updated**: November 2025  
 **Status**: Production Ready ✅
-
----
-
-## 🌟 Quick Links
-
-| Link | Description |
-|------|-------------|
-| [Live Demo](https://your-frontend.onrender.com) | Try it out |
-| [Backend Repo](https://github.com/YOUR_USERNAME/watchparty-backend) | Server code |
-| [Deploy Guide](../DEPLOYMENT_GUIDE_RENDER.md) | Deployment instructions |
-| [Report Bug](https://github.com/YOUR_USERNAME/watchparty/issues) | Found an issue? |
 
 ---
 
